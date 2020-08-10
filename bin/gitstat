@@ -1,0 +1,10 @@
+#for line in $( find . -maxdepth 2 -type d -name .git -print #-execdir ls ; #git symbolic-ref --short HEAD \; ) ; do
+for line in $( find . -maxdepth 2 -type d -name .git -print ) ; do
+    pushd $line/..  > /dev/null
+    s=$(git status -s)
+    [ -z "${s}" ] && echo "    " $PWD
+    [ -z "${s}" ] || echo '--->' $PWD
+    #echo $err $PWD "[$status]"
+    #git status
+    popd > /dev/null
+done
