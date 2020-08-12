@@ -1,4 +1,4 @@
-export BH0_BH__BIN__=$(dirname $0)/bin
-bh () {
-    [[ -z $1 ]] && ( ls ${BH0_BH__BIN__} ) || source $BH0_BH__BIN__/$*
-}
+export                       MAGIC__876587463=$(dirname $0)
+bh0-bch-bin.root () { echo ${MAGIC__876587463}; }
+bh () { [[ -z $1 ]] && ls $(bh0-bch-bin.root)/bin  || source $(bh0-bch-bin.root)/bin/$* ; }
+
