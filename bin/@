@@ -1,5 +1,0 @@
-mkdir -p ~/@
-name=$(basename $PWD)
-rm -rf ~/@/$name
-ln -s $PWD ~/@/$name
-cd ~/@/$name
